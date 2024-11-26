@@ -1,0 +1,202 @@
+/* General Body and Layout Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fef9e7, #eef9f4); /* Light yellow to pale green gradient */
+  color: #333; /* Neutral dark gray */
+  line-height: 1.6;
+}
+
+/* Container with Grid Layout and Subtle Transition */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #ffffff; /* Clean white for readability */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  background-color: #f8f0fc; /* Subtle lavender hover effect */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #2e4053; /* Deep blue-gray for emphasis */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #1e8449; /* Deep green for secondary headings */
+  margin-bottom: 15px;
+  border-left: 4px solid #f39c12; /* Vibrant orange accent */
+  padding-left: 10px;
+}
+
+/* Section Backgrounds */
+.section {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fcf8e3; /* Pale yellow for sections */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Button Styles */
+button {
+  padding: 12px 24px;
+  margin: 10px 0;
+  background-color: #5dade2; /* Soft blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2874a6; /* Slightly darker blue */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+table, th, td {
+  border: 1px solid #dcdcdc;
+}
+
+th {
+  background-color: #f8c471; /* Light orange */
+  color: #2e4053; /* Deep blue-gray */
+  font-weight: bold;
+}
+
+td {
+  padding: 14px;
+  background-color: #fef9e7; /* Light yellow */
+}
+
+tr:nth-child(even) td {
+  background-color: #eef9f4; /* Pale green */
+}
+
+tr:hover td {
+  background-color: #f9ebea; /* Soft red hover */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: background-color 0.5s ease;
+}
+
+.modal-content {
+  position: relative;
+  margin: 10% auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8c471, #f9ebea); /* Light orange to soft red */
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Input and Label Styles */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7; /* Soft gray */
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #f39c12; /* Orange focus */
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+  outline: none;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #555; /* Neutral gray */
+  display: block;
+}
+
+/* Modal Button Styles */
+.modal button {
+  width: 100%;
+  padding: 14px;
+  background-color: #28a745; /* Light green */
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #218838; /* Darker green */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: 85%;
+  }
+}
